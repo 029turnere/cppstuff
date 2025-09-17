@@ -1,0 +1,131 @@
+// calculator (bad)
+
+#include <iostream>
+
+using namespace std;
+//Select Function
+float userenterfloat1;
+float userenterfloat2;
+string userentersymb;
+
+string function(string problemType){
+    if (problemType == "+"){
+        cout << "Addition Selected" << endl;
+        cout << endl;
+    }
+    if (problemType == "-"){
+        cout << "Subtraction Selected" << endl;
+        cout << endl;
+     }
+    if (problemType == "/"){
+        cout << "Division Selected" << endl;
+        cout << endl;
+     }
+    if (problemType == "*"){
+        cout << "Multiplication Selected" << endl;
+        cout << endl;
+    }
+ 
+return problemType;
+}
+
+string enterNumber(){
+    cout << "Select a function {+ - / *}" << endl;
+    cin >> userentersymb;
+    function(userentersymb);
+return userentersymb;
+}
+
+
+
+
+int numSelect1(){
+    float float1;
+    cout << "Please input a float (1/2)" << endl;
+    cin >> userenterfloat1;
+    cout << "Selected Number 1 = ";
+    cout << userenterfloat1 << endl;
+    cout << endl;
+    return 0;
+}
+
+//Select Integer 2
+
+int numSelect2(){
+    float float2;
+    cout << "Please input a float (2/2)" << endl;
+    cin >> userenterfloat2;
+    cout << "Selected Number 2 = ";
+    cout << userenterfloat2 << endl;
+    cout << endl;
+    return 0;
+}
+
+int operationDisplay(){
+    cout << "Selected Calculation:" << endl;
+    cout << userenterfloat1;
+    cout << " ";
+    cout << userentersymb;
+    cout << " ";
+    cout << userenterfloat2 << endl;
+    return userenterfloat2;
+    
+}
+
+using namespace std;
+float addition(float x, float y){
+    return x + y;
+}
+float calcuAdd(){
+    cout << endl;
+    cout << "Calculation Result:" << endl;
+    cout<< addition(userenterfloat2, userenterfloat1);
+    return 0;
+}
+float subtraction(float x, float y){
+    return x - y;
+}
+float calcuSub(){
+    cout << endl;
+    cout << "Calculation Result:" << endl;
+    cout<< subtraction(userenterfloat1, userenterfloat2);
+    return 0;
+}
+float division(float x, float y){
+    return x / y;
+}
+float calcuDiv(){
+    cout << endl;
+    cout << "Calculation Result:" << endl;
+    cout<< division(userenterfloat1, userenterfloat2);
+    return 0;
+}
+float multiply(float x, float y){
+    return x * y;
+}
+float calcuMulti(){
+    cout << endl;
+    cout << "Calculation Result:" << endl;
+    cout<< multiply(userenterfloat1, userenterfloat2);
+    return 0;
+}
+
+int main(){
+    enterNumber();
+    numSelect1();
+    numSelect2();
+    operationDisplay();
+    if (userentersymb == "+"){
+    calcuAdd();
+    }
+    if (userentersymb == "-"){
+        calcuSub();
+    }
+    if (userentersymb == "/"){
+        calcuDiv();
+    }
+    if (userentersymb == "*"){
+        calcuMulti();
+    }
+    return 0;
+}
