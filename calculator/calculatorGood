@@ -1,0 +1,65 @@
+// calculator (good)
+
+//Calculator v2
+#include <iostream>
+#include <regex>
+using namespace std;
+
+//Variables
+string cIn = "";
+float floatA = 0;
+float floatB = 0;
+string function = "";
+float ans = 0;
+
+//Number Input 1
+int numbera(){
+    cin >> floatA;
+    return 0;
+}
+
+//Selecting a function
+int functionsel(){
+    cin >> function;
+    return 0;
+}
+
+//Number Input B
+int numberb(){
+    cin >> floatB;
+    return 0;
+}
+
+int calc(){
+    //add
+    if(function == "+"){
+        ans = floatA + floatB;
+    }
+    //sub
+    if(function == "-"){
+        ans = floatA - floatB;
+    }
+    //div
+    if(function == "/"){
+        ans = floatA / floatB;
+    }   
+    //multi
+    if(function == "*"){
+        ans = floatA * floatB;
+    }
+    
+    return 0;
+    
+int primeCheck(){
+    regex_match
+}
+}
+int main(){
+    cout << "Please input a calculation:\n";
+    numbera();
+    functionsel();
+    numberb();
+    calc();
+    cout << ans << endl;
+    return 0;
+}
